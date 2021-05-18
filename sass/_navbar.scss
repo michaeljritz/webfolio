@@ -1,0 +1,18 @@
+
+nav {
+	display: flex;
+}
+
+
+#nav-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border: solid $green 1px;
+	border-radius: 100%;
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+}

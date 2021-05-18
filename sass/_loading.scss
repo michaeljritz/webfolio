@@ -25,7 +25,7 @@
 	border: solid $green-opaque 3px;
 	border-radius: 100%;
 	z-index: 10;
-	animation: breathing 3s ease-out infinite normal;
+	animation: breathe 3s forwards;
 }
 
 #ring-tl {
@@ -64,16 +64,16 @@
 }
 
 #loading-logo > span {
-  animation: color-change 2s forwards normal;
+  animation: change-color 2s forwards;
 }
 
 
-@keyframes color-change {
+@keyframes change-color {
   0% {color: $white;}
   100% {color: $green;}
 }
 
-@keyframes breathing {
+@keyframes breathe {
   0% {transform: scale(.4);}
   50% {transform: scale(1.5);}
   100% {transform: scale(.4);}
