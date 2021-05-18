@@ -1,0 +1,90 @@
+
+#loading-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: shrink-and-fade .5s 1.6s forwards;
+}
+
+#loading-inner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 200px;
+	border: solid $white 3px;
+	border-radius: 10px;
+}
+
+.loading-ring {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border: solid $green-opaque 3px;
+	border-radius: 100%;
+	z-index: 10;
+	animation: breathing 3s ease-out infinite normal;
+}
+
+#ring-tl {
+	top: 0;
+	left: 0;
+}
+
+#ring-tr {
+	top: 0;
+	right: 0;
+}
+
+#ring-bl {
+	bottom: 0;
+	left: 0;
+}
+
+#ring-br {
+	bottom: 0;
+	right: 0;
+}
+
+#loading-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid $green 3px;
+	border-radius: 100%;
+	background-color: $dark-blue;
+	font-size: 50px;
+	width: 150px;
+	height: 150px;
+	z-index: 100;
+	font-family: 'Courier New', Courier, monospace;
+	color: $white;
+}
+
+#loading-logo > span {
+  animation: color-change 2s forwards normal;
+}
+
+
+@keyframes color-change {
+  0% {color: $white;}
+  100% {color: $green;}
+}
+
+@keyframes breathing {
+  0% {transform: scale(.4);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(.4);}
+}
+
+@keyframes shrink-and-fade {
+  0% {transform: scale(1);}
+  100% {transform: scale(0); display: none;}
+}
+
+
+
+
+
