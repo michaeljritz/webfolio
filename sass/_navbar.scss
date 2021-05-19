@@ -98,6 +98,8 @@ nav a {
 	font-size: 20px;
 	text-decoration: none;
 	color: $white;
+	opacity: 0;
+	transition: opacity 1ms ease-in-out;
 }
 
 nav a:hover {
@@ -106,6 +108,11 @@ nav a:hover {
 
 .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+	opacity: 1;
+	transition: opacity .1s ease-in-out .1s;
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span {
