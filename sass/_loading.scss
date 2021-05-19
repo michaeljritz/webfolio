@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: shrink-and-fade .5s 1.6s forwards;
+//   animation: shrink-and-fade .5s 1.6s forwards;
+animation: shrink-and-fade .5s forwards;
+animation-delay: 1.9s;
 }
 
 #loading-inner {
@@ -26,6 +28,8 @@
 	border-radius: 100%;
 	z-index: 10;
 	animation: breathe 3s forwards;
+    animation-delay: .3s;
+    transform: scale(.4);
 }
 
 #ring-tl {

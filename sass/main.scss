@@ -12,3 +12,14 @@
 body {
 	background-color: $dark-blue;
 }
+
+.button {
+    border: solid $green 2px;
+    border-radius: 3px;
+    padding: 5px 20px;
+    color: $green;
+}
+
+.button:hover {
+    background: $green-extra-transparent;
+}
