@@ -54,7 +54,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid #68e899 3px;
+  border: solid #1fff9a 3px;
   border-radius: 100%;
   background-color: #13151a;
   font-size: 50px;
@@ -74,7 +74,7 @@
     color: white;
   }
   100% {
-    color: #68e899;
+    color: #1fff9a;
   }
 }
 
@@ -114,9 +114,9 @@ header {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
-  width: 36px;
-  height: 36px;
-  border: solid #68e899 2px;
+  min-width: 36px;
+  min-height: 36px;
+  border: solid #1fff9a 2px;
   border-radius: 100%;
   font-family: 'Fahkwang', sans-serif;
   font-size: 12px;
@@ -139,7 +139,6 @@ header {
   right: 30px;
   font-size: 30px;
   height: 100%;
-  color: white;
   z-index: 1000;
 }
 
@@ -147,7 +146,7 @@ header {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #68e899;
+  background: #1fff9a;
   height: 2px;
   width: 20px;
   border-radius: 2px;
@@ -183,7 +182,6 @@ nav {
   right: 0;
   height: 100vh;
   width: 300px;
-  background: #242831;
   text-align: center;
   transform: scale(0, 1);
   transform-origin: right;
@@ -196,6 +194,7 @@ nav ul {
 
 nav li {
   margin-bottom: 40px;
+  position: relative;
 }
 
 nav a {
@@ -208,11 +207,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #68e899;
+  color: #1fff9a;
 }
 
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
+  background-color: #242831;
 }
 
 .nav-toggle:checked ~ nav a {
@@ -235,6 +235,26 @@ nav a:hover {
   width: 30px;
 }
 
+@media only screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  nav {
+    all: unset;
+    width: 100%;
+    text-align: right;
+    margin-right: 30px;
+  }
+  nav li {
+    display: inline;
+    margin-bottom: 0px;
+    margin-left: 40px;
+  }
+  nav a {
+    opacity: 1;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -246,10 +266,10 @@ body {
 }
 
 .button {
-  border: solid #68e899 2px;
+  border: solid #1fff9a 2px;
   border-radius: 3px;
   padding: 5px 20px;
-  color: #68e899;
+  color: #1fff9a;
 }
 
 .button:hover {

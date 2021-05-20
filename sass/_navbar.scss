@@ -11,8 +11,8 @@ header {
 .header-logo {
 	@include flex-center;
 	margin-left: 30px;
-	width: 36px;
-	height: 36px;
+	min-width: 36px;
+	min-height: 36px;
 	border: solid $green 2px;
 	border-radius: 100%;
 	font-family: 'Fahkwang', sans-serif;
@@ -36,7 +36,6 @@ header {
 	right: 30px;
 	font-size: 30px;
 	height: 100%;
-	color: white;
 	z-index: 1000;
 }
 
@@ -78,7 +77,6 @@ nav {
 	right: 0;
 	height: 100vh;
 	width: 300px;
-	background: $lighter-blue;
 	text-align: center;
 	transform: scale(0, 1);
     transform-origin: right;
@@ -91,6 +89,7 @@ nav ul {
 
 nav li {
 	margin-bottom: 40px;
+	position: relative;
 }
 
 nav a {
@@ -106,8 +105,24 @@ nav a:hover {
 	color: $green;
 }
 
+// nav a::after {
+// 	content: '';
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	border: solid red;
+// 	background: red;
+// 	width: 0;
+// 	width: 100%;
+// }
+
+// nav a:hover::before {
+// 	width: 100%;
+// }
+
 .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
+	background-color: $lighter-blue;
 }
 
 .nav-toggle:checked ~ nav a {
@@ -129,3 +144,26 @@ nav a:hover {
 	width: 30px;
 }
 
+
+@media only screen and (min-width: 800px) {
+	.nav-toggle-label {
+		display: none;
+	}
+
+	nav {
+		all: unset;
+		width: 100%;
+		text-align: right;
+		margin-right: 30px;
+	}
+	
+	nav li {
+		display: inline;
+		margin-bottom: 0px;
+		margin-left: 40px;
+	}
+	
+	nav a {
+		opacity: 1;
+	}
+}
