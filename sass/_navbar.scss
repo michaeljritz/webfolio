@@ -2,10 +2,11 @@
 header {
 	display: flex;
 	align-items: center;
-	position: relative;
+	position: absolute;
     padding: 20px 0px;
 	width: 100%;
 	z-index: 100;
+	background-color: $dark-blue-transparent;
 }
 
 .header-logo {
@@ -16,7 +17,7 @@ header {
 	border: solid $green 2px;
 	border-radius: 100%;
 	font-family: 'Fahkwang', sans-serif;
-	font-size: 12px;
+	font-size: 15px;
 	color: $white;
 }
 
@@ -89,7 +90,6 @@ nav ul {
 
 nav li {
 	margin-bottom: 40px;
-	// position: relative;
 }
 
 nav a {
@@ -100,7 +100,6 @@ nav a {
 	color: $white;
 	opacity: 0;
 	transition: opacity 1ms ease-in-out;
-	text-align: center;
 }
 
 .nav-link:hover {
@@ -147,7 +146,7 @@ nav a {
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
 	.nav-toggle-label {
 		display: none;
 	}

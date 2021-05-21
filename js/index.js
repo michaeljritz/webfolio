@@ -1,6 +1,6 @@
 
 window.addEventListener('resize', () => {
-	if (window.innerWidth >= 800) {
+	if (window.innerWidth >= 600) {
 		document.getElementById('nav-toggle').checked = false;
 	}
 });

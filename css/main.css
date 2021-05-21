@@ -103,10 +103,11 @@
 header {
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
   padding: 20px 0px;
   width: 100%;
   z-index: 100;
+  background-color: rgba(19, 21, 26, 0.6);
 }
 
 .header-logo {
@@ -119,7 +120,7 @@ header {
   border: solid #1fff9a 2px;
   border-radius: 100%;
   font-family: 'Fahkwang', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: white;
 }
 
@@ -204,7 +205,6 @@ nav a {
   color: white;
   opacity: 0;
   transition: opacity 1ms ease-in-out;
-  text-align: center;
 }
 
 .nav-link:hover {
@@ -251,7 +251,7 @@ nav a {
   width: 30px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .nav-toggle-label {
     display: none;
   }
@@ -271,6 +271,51 @@ nav a {
   }
 }
 
+section {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.about-me p {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+
+.about-me span {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 600;
+  color: #1fff9a;
+  padding: 0px 10px;
+}
+
+.about-me .button {
+  font-size: 20px;
+}
+
+#about-name span {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+#about-role span {
+  font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+#about-description {
+  padding: 30px 0px;
+  max-width: 600px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -282,10 +327,13 @@ body {
 }
 
 .button {
+  position: relative;
   border: solid #1fff9a 2px;
   border-radius: 3px;
   padding: 5px 20px;
-  color: #1fff9a;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-decoration: none;
 }
 
 .button:hover {

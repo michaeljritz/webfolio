@@ -1,0 +1,73 @@
+
+section {
+	max-width: 1100px;
+	margin: auto;
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+}
+
+.about-me p {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: $white;
+}
+
+.about-me span {
+	font-family: 'Fahkwang', sans-serif;
+	font-weight: 600;
+	color: $green;
+	padding: 0px 10px;
+}
+
+.about-me .button {
+	font-size: 20px;
+}
+
+#about-name span {
+	font-size: clamp(2rem, 5vw, 5rem);
+}
+
+#about-role span {
+	font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+#about-description {
+	padding: 30px 0px;
+	max-width: 600px;
+}
+
+
+
+
+
+// .about-me .content {
+// 	flex: 2;
+// 	color: $white;
+// 	font-family: 'Montserrat', sans-serif;
+// }
+
+// .about-me span {
+// 	color: $green;
+// 	font-family: 'Fahkwang', sans-serif;
+// 	font-weight: 700;
+// 	font-size: 40px;
+// }
+
+
+// .headshot {
+// 	flex: 1;
+// }
+
+
+// .headshot img {
+// 	max-width: 100px;
+
+// }

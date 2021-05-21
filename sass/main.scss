@@ -2,6 +2,8 @@
 @import 'mixins';
 @import 'loading';
 @import 'navbar';
+@import 'section';
+
 
 * {
     padding: 0;
@@ -14,10 +16,13 @@ body {
 }
 
 .button {
+	position: relative;
     border: solid $green 2px;
     border-radius: 3px;
     padding: 5px 20px;
-    color: $green;
+	font-family: 'Courier New', Courier, monospace;
+	color: $white;
+	text-decoration: none;
 }
 
 .button:hover {
