@@ -1,3 +1,15 @@
+.button {
+  border: solid #1fff9a 2px;
+  border-radius: 3px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background: rgba(104, 232, 153, 0.1);
+}
+
 #loading-outer {
   display: flex;
   justify-content: center;
@@ -61,7 +73,7 @@
   width: 150px;
   height: 150px;
   z-index: 100;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -70,7 +82,7 @@
 }
 
 @keyframes change-color {
-  0% {
+  50% {
     color: white;
   }
   100% {
@@ -103,11 +115,17 @@
 header {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   padding: 20px 0px;
   width: 100%;
   z-index: 100;
   background-color: rgba(19, 21, 26, 0.6);
+  transition: top .3s ease-in-out;
+}
+
+.hide-header {
+  top: -100px;
 }
 
 .header-logo {
@@ -119,7 +137,6 @@ header {
   min-height: 36px;
   border: solid #1fff9a 2px;
   border-radius: 100%;
-  font-family: 'Fahkwang', sans-serif;
   font-size: 15px;
   color: white;
 }
@@ -181,7 +198,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: calc(100vh + 100px);
   width: 300px;
   text-align: center;
   transform: scale(0, 1);
@@ -199,8 +216,7 @@ nav li {
 
 nav a {
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: .9rem;
   text-decoration: none;
   color: white;
   opacity: 0;
@@ -293,7 +309,6 @@ section {
 }
 
 .about-me span {
-  font-family: 'Fahkwang', sans-serif;
   font-weight: 600;
   color: #1fff9a;
   padding: 0px 10px;
@@ -303,39 +318,33 @@ section {
   font-size: 20px;
 }
 
-#about-name span {
-  font-size: clamp(2rem, 5vw, 5rem);
-}
-
-#about-role span {
-  font-size: clamp(1.5rem, 3vw, 4rem);
-}
-
-#about-description {
-  padding: 30px 0px;
-  max-width: 600px;
-}
-
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #13151a;
-}
-
-.button {
   position: relative;
-  border: solid #1fff9a 2px;
-  border-radius: 3px;
-  padding: 5px 20px;
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  text-decoration: none;
+  background-color: #13151a;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.button:hover {
-  background: rgba(104, 232, 153, 0.1);
+.space {
+  display: flex;
+  height: 1400px;
+}
+
+.blur {
+  filter: blur(0.5rem);
+}
+
+#freeze {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }

@@ -1,12 +1,11 @@
 
 #loading-outer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-//   animation: shrink-and-fade .5s 1.6s forwards;
-animation: shrink-and-fade .5s forwards;
-animation-delay: 1.9s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	animation: shrink-and-fade .5s forwards;
+	animation-delay: 1.9s;
 }
 
 #loading-inner {
@@ -63,7 +62,7 @@ animation-delay: 1.9s;
 	width: 150px;
 	height: 150px;
 	z-index: 100;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: Arial, Helvetica, sans-serif;
 	color: $white;
 }
 
@@ -73,7 +72,7 @@ animation-delay: 1.9s;
 
 
 @keyframes change-color {
-  0% {color: $white;}
+  50% {color: $white;}
   100% {color: $green;}
 }
 
@@ -87,8 +86,4 @@ animation-delay: 1.9s;
   0% {transform: scale(1);}
   100% {transform: scale(0); display: none;}
 }
-
-
-
-
 

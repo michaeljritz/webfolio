@@ -1,30 +1,37 @@
 @import 'colors';
-@import 'mixins';
+@import 'buttons';
 @import 'loading';
 @import 'navbar';
 @import 'section';
 
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	background-color: $dark-blue;
-}
-
-.button {
 	position: relative;
-    border: solid $green 2px;
-    border-radius: 3px;
-    padding: 5px 20px;
-	font-family: 'Courier New', Courier, monospace;
-	color: $white;
-	text-decoration: none;
+	background-color: $dark-blue;
+	font-family: 'Montserrat', sans-serif;
 }
 
-.button:hover {
-    background: $green-extra-transparent;
+.space {
+	display: flex;
+	height: 1400px;
+}
+
+.blur {
+	filter: blur(.5rem);
+}
+
+#freeze {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
 }
