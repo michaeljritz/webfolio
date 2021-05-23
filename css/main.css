@@ -114,14 +114,13 @@
 
 header {
   display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
-  padding: 20px 0px;
+  padding: 30px;
   width: 100%;
-  z-index: 100;
   background-color: rgba(19, 21, 26, 0.6);
-  transition: top .3s ease-in-out;
+  z-index: 100;
+  transition: top .5s ease-in-out, padding .3s ease-in-out;
 }
 
 .hide-header {
@@ -132,17 +131,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 42px;
+  min-height: 42px;
   border: solid #1fff9a 2px;
   border-radius: 100%;
-  font-size: 15px;
+  font-size: 1.2rem;
   color: white;
 }
 
 .header-logo:hover {
   background-color: rgba(104, 232, 153, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .nav-toggle {
@@ -152,12 +157,8 @@ header {
 .nav-toggle-label {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 30px;
-  font-size: 30px;
-  height: 100%;
-  z-index: 1000;
+  margin-left: auto;
+  z-index: 100;
 }
 
 .nav-toggle-label span,
@@ -165,8 +166,8 @@ header {
 .nav-toggle-label span::after {
   display: block;
   background: #1fff9a;
-  height: 2px;
-  width: 20px;
+  height: 3px;
+  width: 30px;
   border-radius: 2px;
   position: relative;
   text-align: right;
@@ -182,32 +183,48 @@ header {
 }
 
 .nav-toggle-label span::before {
-  bottom: 8px;
-  width: 30px;
+  bottom: 10px;
+  width: 36px;
 }
 
 .nav-toggle-label span::after {
-  top: 8px;
-  width: 10px;
+  top: 10px;
+  width: 24px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  transform: rotate(45deg);
+  width: 36px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  bottom: 0;
+  transform: rotate(90deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  top: 0;
+  width: 36px;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  height: calc(100vh + 100px);
+  height: 100vh;
   width: 300px;
-  text-align: center;
+  background-color: #13151a;
   transform: scale(0, 1);
   transform-origin: right;
-  transition: transform .1s ease-in-out;
+  transition: transform 100ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 nav ul {
   list-style: none;
+  text-align: center;
 }
 
 nav li {
@@ -220,7 +237,6 @@ nav a {
   text-decoration: none;
   color: white;
   opacity: 0;
-  transition: opacity 1ms ease-in-out;
 }
 
 .nav-link:hover {
@@ -249,47 +265,27 @@ nav a {
 
 .nav-toggle:checked ~ nav a {
   opacity: 1;
-  transition: opacity .1s ease-in-out .1s;
+  transition: opacity .1s ease-in-out .15s;
 }
 
-.nav-toggle:checked ~ .nav-toggle-label span {
-  transform: rotate(45deg);
-  width: 30px;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span::before {
-  bottom: 0;
-  transform: rotate(90deg);
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span::after {
-  top: 0;
-  width: 30px;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .nav-toggle-label {
     display: none;
   }
   nav {
     all: unset;
-    width: 100%;
-    text-align: right;
-    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
   }
   nav li {
     display: inline;
     margin-bottom: 0px;
-    margin-left: 40px;
+    margin-left: 30px;
   }
   nav a {
     opacity: 1;
   }
-}
-
-section {
-  max-width: 1100px;
-  margin: auto;
 }
 
 .about-me {
@@ -298,24 +294,6 @@ section {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-}
-
-.about-me p {
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  color: white;
-}
-
-.about-me span {
-  font-weight: 600;
-  color: #1fff9a;
-  padding: 0px 10px;
-}
-
-.about-me .button {
-  font-size: 20px;
 }
 
 * {
@@ -330,16 +308,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.space {
-  display: flex;
-  height: 1400px;
-}
-
 .blur {
   filter: blur(0.5rem);
 }
 
-#freeze {
+#content-cover {
   display: none;
   position: absolute;
   top: 0;
@@ -347,4 +320,8 @@ body {
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+.space {
+  height: 1400px;
 }

@@ -1,8 +1,7 @@
-
-section {
-	max-width: 1100px;
-	margin: auto;
-}
+// section {
+// 	max-width: 950px;
+// 	margin: auto;
+// }
 
 .about-me {
 	display: flex;
@@ -12,21 +11,29 @@ section {
 	min-height: 100vh;
 }
 
-.about-me p {
-	display: block;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
-	font-weight: 300;
-	color: $white;
-}
+// .about-me h1,
+// .about-me h2 {
+// 	color: $green;
+// 	font-weight: 900;
+// }
 
-.about-me span {
-	font-weight: 600;
-	color: $green;
-	padding: 0px 10px;
-}
+// .about-me h1 {
+// 	font-size: clamp(2rem, 6vw, 5rem);
+// }
 
-.about-me .button {
-	font-size: 20px;
-}
+// .about-me h2 {
+// 	font-size: clamp(1.5rem, 3vw, 3.5rem);
+// }
 
+// .about-me p {
+// 	color: $white;
+// 	font-size: 1.2rem;
+// 	font-weight: 100;
+// 	max-width: 500px;
+// 	padding: 10px 0px;
+	
+// }
+
+// .about-me .button {
+// 	font-size: 1.2rem;
+// }

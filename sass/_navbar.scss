@@ -1,37 +1,3 @@
-
-header {
-	display: flex;
-	align-items: center;
-	position: fixed;
-	top: 0;
-    padding: 20px 0px;
-	width: 100%;
-	z-index: 100;
-	background-color: $dark-blue-transparent;
-	transition: top .3s ease-in-out;
-}
-
-.hide-header {
-	top: -100px;
-}
-
-.header-logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-left: 30px;
-	min-width: 36px;
-	min-height: 36px;
-	border: solid $green 2px;
-	border-radius: 100%;
-	font-size: 15px;
-	color: $white;
-}
-
-.header-logo:hover {
-	background-color: $green-extra-transparent;
-}
-
 .nav-toggle {
 	display: none;
 }
@@ -39,12 +5,8 @@ header {
 .nav-toggle-label {
 	display: flex;
 	align-items: center;
-	position: absolute;
-	top: 0;
-	right: 30px;
-	font-size: 30px;
-	height: 100%;
-	z-index: 1000;
+	margin-left: auto;
+	z-index: 100;
 }
 
 .nav-toggle-label span,
@@ -52,8 +14,8 @@ header {
 .nav-toggle-label span::after {
 	display: block;
 	background: $green;
-	height: 2px;
-	width: 20px;
+	height: 3px;
+	width: 30px;
 	border-radius: 2px;
 	position: relative;
 	text-align: right;
@@ -69,32 +31,47 @@ header {
 }
 
 .nav-toggle-label span::before {
-	bottom: 8px;
-	width: 30px;
+	bottom: 10px;
+	width: 36px;
 }
 
 .nav-toggle-label span::after {
-	top: 8px;
-	width: 10px;
+	top: 10px;
+	width: 24px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+	transform: rotate(45deg);
+	width: 36px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+	bottom: 0;
+	transform: rotate(90deg);
+}
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+	top: 0;
+	width: 36px;
 }
 
 nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
-	height: calc(100vh + 100px);
+	height: 100vh;
 	width: 300px;
-	text-align: center;
+	background-color: $dark-blue;
 	transform: scale(0, 1);
     transform-origin: right;
-    transition: transform .1s ease-in-out;
+    transition: transform 100ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 nav ul {
 	list-style: none;
+	text-align: center;
 }
 
 nav li {
@@ -107,7 +84,6 @@ nav a {
 	text-decoration: none;
 	color: $white;
 	opacity: 0;
-	transition: opacity 1ms ease-in-out;
 }
 
 .nav-link:hover {
@@ -136,39 +112,27 @@ nav a {
 
 .nav-toggle:checked ~ nav a {
 	opacity: 1;
-	transition: opacity .1s ease-in-out .1s;
+	transition: opacity .1s ease-in-out .15s;
 }
 
-.nav-toggle:checked ~ .nav-toggle-label span {
-	transform: rotate(45deg);
-	width: 30px;
-}
 
-.nav-toggle:checked ~ .nav-toggle-label span::before {
-	bottom: 0;
-	transform: rotate(90deg);
-}
-.nav-toggle:checked ~ .nav-toggle-label span::after {
-	top: 0;
-	width: 30px;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
+	
 	.nav-toggle-label {
 		display: none;
 	}
 
 	nav {
 		all: unset;
-		width: 100%;
-		text-align: right;
-		margin-right: 30px;
+		display: flex;
+		align-items: center;
+		margin-left: auto;
 	}
 	
 	nav li {
 		display: inline;
 		margin-bottom: 0px;
-		margin-left: 40px;
+		margin-left: 30px;
 	}
 	
 	nav a {
