@@ -1,0 +1,28 @@
+
+.intro {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro h1 {
+	color: $white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: clamp(1.1rem, 3vw, 3.5rem);
+	text-align: center;
+}
+
+.intro span {
+	color: $green;
+	font-weight: 900;
+}
+
+.intro a {
+	margin-top: 20px;
+	font-size: clamp(.85rem, 1.4vw, 1.2rem);
+}
+
+

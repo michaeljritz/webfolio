@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
 		document.getElementsByTagName('header')[0].style.paddingTop = '10px';
 	} else {
 		document.getElementsByTagName('header')[0].classList.remove('hide-header');
-		document.getElementsByTagName('header')[0].style.paddingTop = '30px';
+		document.getElementsByTagName('header')[0].style.paddingTop = '25px';
 	}
 
 	if (currentScrollPos < previousScrollPos) document.getElementsByTagName('header')[0].classList.remove('hide-header');

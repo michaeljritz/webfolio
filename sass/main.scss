@@ -4,6 +4,8 @@
 @import 'header';
 @import 'navbar';
 @import 'section';
+@import 'intro';
+@import 'about';
 
 * {
     box-sizing: border-box;
@@ -21,6 +23,11 @@ body {
 	filter: blur(.5rem);
 }
 
+#content {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 #content-cover {
 	display: none;
 	position: absolute;
@@ -31,6 +38,42 @@ body {
 	z-index: 10;
 }
 
+
+
+
+
+
+
 .space {
 	height: 1400px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 480px) {
+	
+	#content {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	
+	#content {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	
+	#content {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
 }
