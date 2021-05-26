@@ -10,8 +10,7 @@
 }
 
 .about-details {
-	flex: 1 0 66%;
-	padding-right: 40px;
+	flex: 1;
 }
 
 .about-details p {
@@ -19,43 +18,96 @@
 	font-size: 1.2rem;
 	font-size: clamp(1rem, 1.5vw, 1.2rem);
 	font-weight: 200;
-	padding-top: 20px;
+	margin-bottom: 50px;
+	line-height: 1.7rem;
+
+	span {
+		color: $green;
+	}
 }
 
 .about-details h3 {
-	font-size: 1.3rem;
-	color: $green;
-	margin-top: 20px;
 	margin-bottom: 10px;
-	font-weight: 500;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: $green;
 }
 
 .skill-list {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 500px;
+	max-width: 650px;
+
 }
 
 .skill-list span {
-	background: $gray;
+	border: solid $white 1px;
 	padding: 5px 20px;
 	border-radius: 3px;
 	color: $white;
 	font-size: .8rem;
-	margin: 5px 5px 0px 0px;
+	font-weight: 700;
+	margin: 5px 10px 5px 0px;
 }
 
 .about-image-outer {
-	flex-basis: 30%;
 	margin: auto;
-		padding: 10px;
+	padding-left: 40px;
+	max-width: 300px;
+}
 
+.about-image-inner img {
+	position: relative;
+	max-width: 100%;
+	border: solid $green 2px;
+	border-radius: 100%;
+	z-index: 10;
+}
+
+.about-image-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// background-color: $green-extra-transparent;
+	width: 100%; 
+	height: 100%;
+	border-radius: 100%;
+	// border: solid red 2px;
+	// border-radius: 100%;
+	background: linear-gradient(rgba(0, 255, 170, 0.45), rgba(0, 255, 128, 0.45));
+	z-index: 20;
+	// width: 300px;
+	// height: 300px;
+	// filter: sepia(50%) saturate(300%) brightness(10%) hue-rotate(180deg);
+}
+
+.about-image-cover:hover {
+	background: none;
 }
 
 .about-image-inner {
 	position: relative;
 	border-radius: 100%;
 }
+
+
+
+.about-image-inner span {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	// border: solid $white 2px;
+	background-color: $green-extra-transparent;
+	border-radius: 100%;
+	z-index: 20;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+
 
 .about-image-inner::before, 
 .about-image-inner::after {
@@ -80,14 +132,18 @@
 	top: -14px;
 	left: 15px;
 	border: solid $green-extra-transparent 3px;
-
 }
 
-.about-image-inner img {
-	position: relative;
-	max-width: 100%;
-	min-width: 230px;
-	border: solid $green 2px;
-	border-radius: 100%;
-	z-index: 10;
+
+
+
+@media only screen and (max-width: 768px) {
+	.about-content {
+		display: block;
+	}
+
+	.about-image-outer {
+		padding: 20px;
+
+	}
 }
