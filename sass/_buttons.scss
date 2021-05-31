@@ -10,3 +10,17 @@
 .button:hover {
     background: $green-extra-transparent;
 }
+
+.project-button {
+    border-radius: 3px;
+    padding: 5px;
+	text-decoration: none;
+	font-size: .8rem;
+	color: $dark-blue;
+	background-color: $green;
+	font-weight: 500;
+}
+
+.project-button:hover {
+	background-color: $green-transparent;
+}
