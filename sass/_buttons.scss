@@ -5,22 +5,24 @@
     padding: 5px 20px;
 	text-decoration: none;
 	color: $white;
+	font-weight: 500;
 }
 
 .button:hover {
     background: $green-extra-transparent;
 }
 
+
 .project-button {
+    border: solid $green 1px;
     border-radius: 3px;
-    padding: 5px;
+    padding: 3px 6px;
 	text-decoration: none;
+	color: $white;
 	font-size: .8rem;
-	color: $dark-blue;
-	background-color: $green;
 	font-weight: 500;
 }
 
 .project-button:hover {
-	background-color: $green-transparent;
+    background: $green-extra-transparent;
 }

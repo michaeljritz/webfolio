@@ -1,9 +1,6 @@
 .about {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	
-	padding-top: 20px;
-	// border: solid red;
 }
 
 .about-details {
@@ -12,11 +9,6 @@
 	grid-row-end: -1;
 	grid-row-start: 1;
 	padding-right: 30px;
-
-}
-
-.about-details > * {
-	// padding: 20px 0px;
 }
 
 .about-details p {
@@ -43,15 +35,13 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	max-width: 400px;
-
-	padding-bottom: 20px;
+	max-width: 500px;
 }
 
 .skill-list span {
-	color: $white;
+	color: $dark-blue;
 	font-size: .8rem;
-	border: solid $white 1px;
+	background-color: $white;
 	border-radius: 3px;
 	padding: 3px 5px;
 	margin-bottom: 5px;

@@ -2,7 +2,7 @@
 .project {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	align-items: center;
+	align-items: center;	
 }
 
 .project-img-outer {
@@ -15,8 +15,6 @@
 	grid-row-end: -1;
 	grid-row-start: 1;
 	height: 100%;
-	// padding: 50px 50px;
-	padding: 0px 20px 0px 0px;
 }
 
 .project-img-inner {
@@ -39,11 +37,11 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: $green-extra-transparent;
+	background: $green-extra-transparent;
 }
 
 
-.project-img-inner > div:hover {
+.project-img-inner a:hover::after {
 	background: rgba(0, 0, 0, 0);
 }
 
@@ -62,12 +60,6 @@
 	z-index: 40;
 }
 
-.project-details-outer > *,
-.project-details-inner h3 {
-	margin: 30px 0px;
-}
-
-
 .project-details-inner h3 {
 	color: $white;
 	font-size: 1.3rem;
@@ -78,72 +70,90 @@
 	position: relative;
 	background-color: $lighter-blue;
 	border-radius: 5px;
-	padding: 22px;
-	line-height: 1.5rem;
+	line-height: 1.3rem;
 	z-index: 50;
 	font-size: .9rem;
 	font-weight: 300;
 	color: $gray;
+	
+	padding: 15px;
+	border: solid $white 1px;
+
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.project-skills {
+	display: flex;
+	justify-content: flex-end;
 }
 
 .project-skills span {
-	border: solid $white 1px;
-	border-radius: 3px;
+	color: $dark-blue;
 	font-size: .8rem;
+	background-color: $white;
+	border-radius: 3px;
+	padding: 3px 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
 }
 
+.project-buttons {
+	margin-top: 10px;
+}
 
 
 
 @media only screen and (max-width: 768px) {
 
-	.project-img-outer {
-		grid-column-end: -1;
-		grid-column-start: 1;
-		grid-row-end: -1;
-		grid-row-start: 1;
+	.project {
+		display: block;
+		padding: 50px;
 
-		height: 100%;
-		width: 100%;
-		background: url('/images/project.png');
+		background: url('/images/project2.png');
 		background-size: cover;
 		background-position: top center;
+
+		border-radius: 3px;
+		position: relative;
 	}
 
-	.project-details-outer {
-		padding: 30px;
-		grid-column-end: -1;
-		grid-column-start: 1;
-		grid-row-end: -1;
-		grid-row-start: 1;
-		text-align: left;
-	}
-
-	.project-details-outer > *,
-	.project-details-inner h3 {
-		margin: 10px 0px;
-	}
-
-	.project-details-inner p {
-		background: none;
-		padding: 0;
-	}
-
-	.project-img-outer::after {
+	.project::after {
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
+		background-color: rgba(10, 43, 28, 0.863);
 		width: 100%;
 		height: 100%;
-		background-color: rgba(3, 27, 16, 0.76);;
+		z-index: 40;
 	}
 
-	.project-img-inner img {
-		display: none;
+	.project-img-outer {
+		display: none;	
+	}
+
+	.project-details-outer {
+		position: relative;
+		grid-column-end: -1;
+		grid-column-start: 1;
+		grid-row-end: -1;
+		grid-row-start: 1;
+		z-index: 50;
+		text-align: left;
+	}
+
+	.project-skills {
+		justify-content: flex-start;
+	}
+
+	.project-skills span {
+		margin-left: 0;
+		margin-right: 5px;
 	}
 
 }
+
 
 @media only screen and (max-width: 1080px) {
 	.project-details-outer {
@@ -151,3 +161,62 @@
 		grid-column-start: 5;
 	}
 }
+
+
+
+// @media only screen and (max-width: 768px) {
+
+// 	.project-img-outer {
+// 		grid-column-end: -1;
+// 		grid-column-start: 1;
+// 		grid-row-end: -1;
+// 		grid-row-start: 1;
+
+// 		height: 100%;
+// 		width: 100%;
+// 		background: url('/images/project2.png');
+// 		background-size: cover;
+// 		background-position: top center;
+// 	}
+
+// 	.project-details-outer {
+// 		padding: 30px;
+// 		grid-column-end: -1;
+// 		grid-column-start: 1;
+// 		grid-row-end: -1;
+// 		grid-row-start: 1;
+// 		text-align: left;
+// 	}
+
+// 	.project-details-outer > *,
+// 	.project-details-inner h3 {
+// 		margin: 10px 0px;
+// 	}
+
+// 	.project-details-inner p {
+// 		background: none;
+// 		padding: 0;
+// 	}
+
+// 	.project-img-outer::after {
+// 		content: '';
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background-color: rgba(3, 27, 16, 0.76);;
+// 	}
+
+// 	.project-img-inner img {
+// 		display: none;
+// 	}
+
+// }
+
+// @media only screen and (max-width: 1080px) {
+// 	.project-details-outer {
+// 		grid-column-end: -1;
+// 		grid-column-start: 5;
+// 	}
+// }

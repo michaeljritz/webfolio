@@ -1,11 +1,13 @@
 section {
 	max-width: 1000px;
 	margin: auto;
+	margin-bottom: 20px;
 }
 
 .section-header {
 	display: flex;
 	align-items: center;
+	margin-bottom: 20px;
 
 	h2 {
 		color: $green;
